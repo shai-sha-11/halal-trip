@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halal Trip / Events</title>
+    <link rel="shortcut icon" href="images/Logo.png">
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+      <div class="logo">
+          <img src="images/Logo.png" alt="Halal Trip Logo" width="90px" height="70px">
+      </div>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="masjid.html">Nearby Masjids</a></li>
+              <li><a href="restaurant.html" >Halal Restaurants</a></li>
+              <li><a href="adhkars.html">Reminders & Adhkars</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </nav>
+      <div class="search-bar">
+          <input type="text" placeholder="Search restaurants or locations...">
+          <button><img src="images/search-icon.png" width="16" alt=""></button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Upcoming Halal Events in Kasaragod</h1>
+            <p>Stay up-to-date with the latest halal-friendly events happening in Kasaragod. Join us in supporting our community!</p>
+        </div>
+    </section>
+
+    <!-- Event Listings Section -->
+    <section class="event-listings">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+
+            <!-- Event 1 -->
+            <div class="event-card">
+                <img src="images/halal-food-festival.jpg" alt="Event 1">
+                <div class="event-details">
+                    <h3>Annual Halal Food Festival</h3>
+                    <p class="event-date">Date: 15th January 2024</p>
+                    <p class="event-location">Location: Kasaragod City Center</p>
+                    <p class="event-description">
+                        Join us for a celebration of delicious halal food, featuring local chefs, cooking classes, and more! A great opportunity to explore the rich culinary culture of Kasaragod.
+                    </p>
+                    <a href="#" class="event-btn">More Details</a>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <img src="images/malik-deenar-uroos.jpg" alt="Event 2">
+                <div class="event-details">
+                    <h3>Malik Deenar Uroos</h3>
+                    <p class="event-date">Date: 20th February 2024</p>
+                    <p class="event-location">Location: Malik Deenar Masjid, Kasaragod</p>
+                    <p class="event-description">
+                        Celebrate the rich Islamic culture with exhibitions, talks, and performances at the Malik Deenar Masjid. A great event for families and individuals alike.
+                    </p>
+                    <a href="#" class="event-btn">More Details</a>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+                <img src="images/islamic-cultural-event.jpg" alt="Event 3">
+                <div class="event-details">
+                    <h3>Islamic Cultural Festival</h3>
+                    <p class="event-date">Date: 10th March 2024</p>
+                    <p class="event-location">Location: Kasaragod Convention Center</p>
+                    <p class="event-description">
+                        A gathering of halal travel enthusiasts. Meet with halal-friendly travel agencies, tour operators, and get the latest updates on halal travel destinations.
+                    </p>
+                    <a href="#" class="event-btn">More Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- About Section -->
+          <div class="footer-section about">
+              <h3>Halal Trip</h3>
+              <p>Your trusted companion for halal-friendly travel. Explore the world with ease and confidence.</p>
+              <ul class="social-icons">
+                  <li><a href="#"><img src="images/fb-logo.png" alt="Facebook"></a></li>
+                  <li><a href="#"><img src="images/x-icon.png" alt="Twitter"></a></li>
+                  <li><a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a></li>
+              </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="masjid.html">Masjid Finder</a></li>
+                <li><a href="restaurant.html">Halal Restaurants</a></li>
+                <li><a href="adhkars.html">Adhkar & Reminders</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="footer-section footer-resources">
+              <h4>Resources</h4>
+              <ul>
+                  <li><a href="#">Travel Tips</a></li>
+                  <li><a href="#">Community Blog</a></li>
+                  <li><a href="#">Halal Certification Guide</a></li>
+                  <li><a href="#">FAQs</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <p>&copy; 2024 Halal Trip. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+<script>
+  // Get the button
+  const backToTopButton = document.getElementById("back-to-top");
+
+  // Show the button when scrolling down 200px from the top
+  window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          backToTopButton.classList.add("show");
+      } else {
+          backToTopButton.classList.remove("show");
+      }
+  };
+
+  // Scroll to the top when the button is clicked
+  backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"  // Smooth scroll
+      });
+  });
+</script>
+</body>
+</html>
