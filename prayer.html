@@ -32,60 +32,24 @@
       </div>
     </header>
 
-    <!-- Prayer Timetables Section -->
-    <section class="prayer-timings">
+    <!-- Hero Section -->
+    <section class="prayer-hero">
+        <div class="hero-content">
+            <h1>Prayer Timetable</h1>
+            <p>Accurate and updated prayer times based on your location.</p>
+        </div>
+    </section>
+
+    <!-- Prayer Timetable Section -->
+    <section class="prayer-section">
         <div class="container">
-            <h1>Prayer Timetables for Your Location</h1>
-            <p>Stay on track with accurate prayer times and nearby mosques for a peaceful journey.</p>
+            <h2>Today's Prayer Times</h2>
+            <p id="location-info">Fetching location...</p>
 
-            <!-- Prayer Times Table -->
-            <table class="prayer-table">
-                <thead>
-                    <tr>
-                        <th>Prayer</th>
-                        <th>Time</th>
-                    </tr>
-                </thead>
-                <tbody id="prayer-times">
-                    <!-- Prayer times will be inserted here dynamically -->
-                </tbody>
-            </table>
-
-            <!-- Nearby Mosques Section -->
-            <section class="nearby-mosques">
-                <h2>Nearby Mosques</h2>
-                <div class="mosque-list" id="mosque-list">
-                    <div class="mosque-card">
-                        <h3>Malik Deenar Mosque</h3>
-                        <p><strong>Location:</strong> Deenar Road , Thalangara</p>
-                        <ul class="facilities">
-                            <li>✔ Parking</li>
-                            <li>✔ Wudu Area</li>
-                            <li>✔ Female Prayer Area</li>
-                        </ul>
-                      </div>
-          
-                      <!-- Masjid Card 2 -->
-                      <div class="mosque-card">
-                          <h3>Hydrose Masjid</h3>
-                          <p><strong>Location:</strong> Bekal Fort , Bekal</p>
-                          <ul class="facilities">
-                              <li>✔ Wudu Area</li>
-                              <li>✔ Female Prayer Area</li>
-                          </ul>
-                      </div>
-          
-                      <!-- Masjid Card 3 -->
-                      <div class="mosque-card">
-                          <h3>Panathur Masjid</h3>
-                          <p><strong>Location:</strong>Panathur , Ranipuram</p>
-                          <ul class="facilities">
-                              <li>✔ Parking</li>
-                              <li>✔ Wudu Area</li>
-                          </ul>
-                      </div>
-                  </div>
-            </section>
+            <!-- Prayer Times Grid -->
+            <div class="prayer-grid" id="prayer-grid">
+                <!-- Prayer times will be inserted dynamically here -->
+            </div>
         </div>
     </section>
 
