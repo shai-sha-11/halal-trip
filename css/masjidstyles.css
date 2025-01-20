@@ -1,0 +1,793 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Header Section */
+header {
+  background-color: white;
+  color: #32462d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 2px solid #32462d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Logo Styling */
+header .logo img {
+  width: 90px;
+  height: 70px;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav ul .active{
+  background-color: #a35b2f;
+  color: white;
+  border-radius: 5px;
+}
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #32462d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #636035;
+  border-radius: 5px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #32462d;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.search-bar button {
+  background-color: #a35b2f;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button img {
+  width: 16px;
+  filter: invert(1); /* White icon for better visibility */
+}
+
+.search-bar button:hover {
+  background-color: #636035;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+      position: absolute;
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+  }
+
+  .search-bar {
+      margin-top: 15px;
+      width: 100%;
+      justify-content: center;
+  }
+
+  .search-bar input {
+      width: 80%;
+  }
+
+  .search-bar button {
+      width: 12%;
+      height: 38px;
+  }
+}
+
+/* Hero Section Styles */
+.hero-masjid {
+  background-image: url('../images/masjid-hero.png'); /* Replace with a relevant background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-masjid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for text visibility */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-masjid h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #a35b2f;
+  margin-bottom: 20px;
+}
+
+.hero-masjid p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #dcdcdc;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-buttons .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+  background-color: #32462d;
+  color: white;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #636035;
+  transform: scale(1.05);
+}
+
+.cta-buttons .btn-secondary {
+  background-color: #a35b2f;
+  color: white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: #636035;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-masjid{
+    margin-top: 200px;
+  }
+  .hero-masjid h1 {
+      font-size: 2.0rem;
+  }
+
+  .hero-masjid p {
+      font-size: 0.5rem;
+  }
+
+  .cta-buttons .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-masjid h1 {
+      font-size: 2rem;
+  }
+
+  .hero-masjid p {
+      font-size: 0.9rem;
+  }
+
+  .cta-buttons {
+      flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+      width: 100%;
+      text-align: center;
+  }
+  .cta-buttons{
+    text-align: center;
+    width: 300px;
+  }
+}
+
+/* Search Filters Section */
+.search-filters {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-filters h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #32462d;
+  margin-bottom: 20px;
+}
+
+.filters-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.filter-group {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-size: 1rem;
+  color: #32462d;
+  font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #32462d;
+  border-radius: 5px;
+}
+
+.filter-group input[type="range"] {
+  cursor: pointer;
+}
+
+.filter-group #distanceValue {
+  font-size: 0.9rem;
+  color: #636035;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: #32462d;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex: 1 1 100%;
+}
+
+.filter-actions .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-actions .btn-primary {
+  background-color: #32462d;
+  color: white;
+}
+
+.filter-actions .btn-primary:hover {
+  background-color: #636035;
+}
+
+.filter-actions .btn-secondary {
+  background-color: #a35b2f;
+  color: white;
+}
+
+.filter-actions .btn-secondary:hover {
+  background-color: #636035;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-group {
+      flex: 1 1 100%;
+  }
+}
+/* Masjid Listings Section */
+.masjid-listings {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.masjid-listings h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #32462d;
+  margin-bottom: 30px;
+}
+
+.masjid-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.masjid-card {
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masjid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.masjid-card h3 {
+  font-size: 1.5rem;
+  color: #a35b2f;
+  margin-bottom: 10px;
+}
+
+.masjid-card p {
+  font-size: 0.9rem;
+  color: #32462d;
+  margin-bottom: 10px;
+}
+
+.masjid-card .facilities {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.masjid-card .facilities li {
+  font-size: 0.9rem;
+  color: #636035;
+}
+
+.masjid-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #32462d;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.masjid-card .btn:hover {
+  background-color: #636035;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .masjid-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .masjid-card {
+      width: 90%;
+  }
+}
+
+/* Map Section */
+.map-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #32462d;
+}
+
+/* Responsive Map */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .map-container iframe {
+    height: 400px; /* Slightly smaller map height for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 300px; /* Smaller map size for mobile devices */
+  }
+  
+  .map-container h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container iframe {
+    height: 250px; /* Even smaller for very small screens */
+  }
+  
+  .map-container h2 {
+    font-size: 1.5rem; /* Adjust heading for small devices */
+  }
+}
+
+/* Featured Masjids Section */
+.featured-masjids {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured-masjids h2 {
+  font-size: 2.5rem;
+  color: #32462d;
+  margin-bottom: 20px;
+}
+
+.featured-masjids p {
+  font-size: 1rem;
+  color: #636035;
+  margin-bottom: 40px;
+}
+
+.masjid-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.masjid-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 23%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.masjid-card:hover {
+  transform: translateY(-10px);
+}
+
+.masjid-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.masjid-info {
+  padding: 20px;
+}
+
+.masjid-info h3 {
+  font-size: 1.6rem;
+  color: #32462d;
+  margin-bottom: 15px;
+}
+
+.masjid-info p {
+  font-size: 1rem;
+  color: #636035;
+  margin-bottom: 20px;
+}
+
+.masjid-info .btn {
+  padding: 10px 20px;
+  background-color: #a35b2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.masjid-info .btn:hover {
+  background-color: #636035;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .masjid-card {
+      width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .masjid-card {
+      width: 100%;
+  }
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a35b2f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #636035;
+}
+
+#back-to-top i {
+  font-size: 1.5rem;
+}
+
+/* Show the button when scrolled down */
+#back-to-top.show {
+  display: block;
+}
+
+/* Show the button when scrolled down */
+#back-to-top.show {
+  display: block;
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #32462d;
+  color: white;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #a35b2f;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-section p {
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #a35b2f;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* Invert for white icons */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  color: #dcdcdc;
+  font-size: 0.8rem;
+}
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social-icons{
+    margin-left: 320px;
+  }
+  .footer-section {
+    text-align: center;
+    width: 80%; /* Reduce width to make it look balanced */
+  }
+
+  .footer-section h3, .footer-section h4 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section p {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-section {
+    text-align: center;
+    width: 90%;
+  }
+
+  .footer-section h3, .footer-section h4 {
+    font-size: 1.3rem;
+  }
+
+  .footer-section p {
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    margin-left: 270px;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+    margin-top: 30px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+
+  .footer-section h3, .footer-section h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    margin-left: 100px;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
