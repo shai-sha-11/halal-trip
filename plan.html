@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halal Trip / Plan My Trip</title>
+  <link rel="shortcut icon" href="images/Logo.png">
+  <link rel="stylesheet" href="css/plan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="plan-script.js" defer></script>
+</head>
+<body>
+  <!--Header Section-->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/Logo.png" alt="Halal Trip Logo" width="90px" height="70px"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="masjid.html">Nearby Masjids</a></li>
+            <li><a href="restaurant.html" >Halal Restaurants</a></li>
+            <li><a href="adhkars.html" >Reminders & Adhkars</a></li>
+            <li><a href="contact.html" >Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-plan">
+    <video autoplay muted loop id="hero-video">
+      <source src="videos/kappil.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Plan Your Halal Trip</h1>
+      <p>Explore beautiful destinations with your Mahram companions and Islamic values.</p>
+      <a href="#plan-form" class="btn btn-primary">Start Planning</a>
+    </div>
+  </section>
+
+  <!-- Plan My Trip Form -->
+  <section id="plan-form" class="plan-trip-form">
+    <h2>Plan Your Trip</h2>
+    <form id="trip-form">
+      <!-- Add Travelers Section -->
+      <div class="form-section">
+        <h3>Add Travelers</h3>
+        <div class="travelers">
+          <div class="traveler-group">
+            <label for="adults">Adults:</label>
+            <div class="count-selector">
+              <button id="adults-minus" class="count-btn">-</button>
+              <input type="text" id="adults" value="1" readonly />
+              <button id="adults-plus" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="traveler-group">
+            <label for="children">Children:</label>
+            <div class="count-selector">
+              <button id="children-minus" class="count-btn">-</button>
+              <input type="text" id="children" value="0" readonly />
+              <button id="children-plus" class="count-btn">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Mahram Section -->
+      <div class="form-section">
+        <h3>Who they are?</h3>
+        <label for="mahram">Mahram:</label>
+        <input type="text" id="mahram" placeholder="Enter your mahram (e.g., Mother)" required>
+        <button id="add-mahram-btn">Add Mahram</button>
+
+        <div id="mahram-list">
+          <h4>Your Selected Mahrams:</h4>
+          <ul id="mahrams"></ul>
+        </div>
+
+        <p id="mahram-message" class="hidden"></p>
+      </div>
+
+      <!-- Add Destination Section -->
+      <div class="form-section">
+        <h3>Add Your Destination</h3>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter your destination (e.g., Bekal Fort)" required>
+        <button id="add-destination-btn">Add Destination</button>
+
+        <div id="destination-list">
+          <h4>Your Selected Destinations:</h4>
+          <ul id="destinations"></ul>
+        </div>
+
+        <p id="destination-message" class="hidden"></p>
+      </div>
+
+      <!-- Budget Section -->
+    <div class="form-section">
+      <h3>Set Your Budget</h3>
+      <div class="budget">
+        <label for="budget">Budget ($):</label>
+        <input type="number" id="budget" value="100" min="0" step="10">
+      </div>
+    </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" onclick="alert('Planned Successfully')">Plan My Trip</button>
+    </form>
+  </section>
+
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h3>Halal Trip</h3>
+            <p>Your trusted companion for halal-friendly travel. Explore the world with ease and confidence.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="images/fb-logo.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/x-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="masjid.html">Masjid Finder</a></li>
+                <li><a href="restaurant.html">Halal Restaurants</a></li>
+                <li><a href="adhkars.html">Adhkar & Reminders</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-section footer-resources">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Travel Tips</a></li>
+                <li><a href="#">Community Blog</a></li>
+                <li><a href="#">Halal Certification Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Halal Trip. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halal Trip / Kavvayi Backwaters</title>
+  <link rel="shortcut icon" href="images/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/kavvayi.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Header Section (reuse from Bekal Fort) -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/Logo.png" alt="Halal Trip Logo" width="90px" height="70px"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="masjid.html">Nearby Masjids</a></li>
+            <li><a href="restaurant.html">Halal Restaurants</a></li>
+            <li><a href="adhkars.html">Reminders & Adhkars</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="destination-details">
+    <div class="container">
+      <h1>Discover Kavvayi Backwaters</h1>
+      <p>Explore the tranquil beauty of Kavvayi Backwaters, a serene destination offering breathtaking views, boating, and peaceful surroundings in Kerala.</p>
+
+      <!-- Button to Open Modal -->
+      <button id="openModalBtn" class="btn">Learn More</button>
+
+      <!-- Popup/Modal Section -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Kavvayi Backwaters - Overview</h2>
+          <p>Kavvayi Backwaters, located in the Kasaragod district of Kerala, is a hidden gem known for its scenic beauty and tranquility. It is the perfect spot for boating, bird watching, and immersing yourself in nature.</p>
+          <img src="images/Kavvayi-Backwaters-Payyanur-.png" alt="Kavvayi Backwaters" class="modal-img">
+        </div>
+      </div>
+
+      <!-- Interactive Map Section -->
+      <h2>Find Your Way to Kavvayi</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.5488931181777!2d75.06943657645959!3d12.529189748350216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba47915b00059d5%3A0xa65e315ca438c27a!2sKavvayi%20Backwaters!5e0!3m2!1sen!2sin!4v1734364567863!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Booking & Planning Section -->
+      <section class="booking-section">
+        <h2>Plan Your Visit</h2>
+        <form id="booking-form">
+          <button type="submit" class="btn"><a href="plan.html">Book now</a></button>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer Section (reuse from Bekal Fort) -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>Halal Trip</h3>
+            <p>Your trusted companion for halal-friendly travel. Explore the world with ease and confidence.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="images/fb-logo.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/x-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="masjid.html">Masjid Finder</a></li>
+                <li><a href="restaurant.html">Halal Restaurants</a></li>
+                <li><a href="adhkars.html">Adhkar & Reminders</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section footer-resources">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Travel Tips</a></li>
+                <li><a href="#">Community Blog</a></li>
+                <li><a href="#">Halal Certification Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Halal Trip. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Modal functionality
+    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("openModalBtn");
+    const closeModalBtn = document.getElementsByClassName("close-btn")[0];
+
+    // Open the modal
+    openModalBtn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // Close the modal
+    closeModalBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks outside of the modal content
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Booking form submission
+    document.getElementById("booking-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Booking request submitted successfully!");
+    });
+
+    // Get the button
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Show the button when scrolling down 200px from the top
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.classList.add("show");
+        } else {
+            backToTopButton.classList.remove("show");
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"  // Smooth scroll
+        });
+    });
+  </script>
+</body>
+</html>

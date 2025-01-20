@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halal Trip</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="images/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!--Header Section-->
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="images/Logo.png" width="90px" height="70px" alt="Logo"></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="masjid.html">Nearby Masjids</a></li>
+            <li><a href="Restaurant.html">Halal Restaurants</a></li>
+            <li><a href="adhkars.html">Reminders & Adhkars</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login/Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar (replaced by icon in mobile) -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="search-input">
+        <button><img src="images/search-icon.png" alt="Search Icon" width="16"></button>
+    </div>
+  </header>
+
+  <!--Hero Section-->
+  <section class="hero-video-section">
+    <div class="video-container">
+      <video autoplay muted loop playsinline id="hero-background-video">
+        <source src="videos/hero-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+    <div class="hero-content">
+      <h1>Halal travel Awaits!</h1>
+      <p>Embark on a Halal-friendly journey with serene destinations, halal food, and prayer facilities—experience travel aligned with your values.</p>
+      <div class="cta-buttons">
+        <a href="#explore" class="btn btn-primary">Explore</a>
+        <a href="plan.html" class="btn btn-secondary">Plan My Trip</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Features Section-->
+  <section class="features">
+    <div class="container">
+        <h2>Why Choose Halal Trip?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="images/masjid-nearby.jpg" alt="Masjid Icon">
+                <h3>Nearby Masjids</h3>
+                <p>Find prayer spaces wherever you are, no matter your location.</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/hotel.jpeg" alt="Restaurant Icon">
+                <h3>Halal Restaurants</h3>
+                <p>Explore authentic halal dining options near you.</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/reminder.jpg" alt="Reminder Icon">
+                <h3>Reminders & Adhkars</h3>
+                <p>Stay spiritually connected with daily reminders and adhkars.</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/tips.jpg" alt="Personalized Tips Icon">
+                <h3>Personalized Tips</h3>
+                <p>Get tailored travel recommendations based on your preferences.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!--Destination Section-->
+  <section class="destinations" id="explore">
+    <div class="container">
+        <h2 class="section-title">Kasaragod and Beyond</h2>
+        <p class="section-description">Discover breathtaking places that offer halal-friendly experiences for your next adventure.</p>
+        <div class="destinations-grid">
+            <!-- Destination Card 1 -->
+            <div class="destination-card" style="background-image: url('images/Bekal-fort.jpg');">
+                <div class="overlay">
+                    <h3>Bekal Fort</h3>
+                    <p>Bekal</p>
+                    <button class="explore-btn"><a href="bekal.html" class="link">Explore</a></button>
+                </div>
+            </div>
+
+            <!-- Destination Card 2 -->
+            <div class="destination-card" style="background-image: url('images/malik-deenar-mosque.jpg');">
+                <div class="overlay">
+                    <h3>Malik Deenar Mosque</h3>
+                    <p>Thalangara</p>
+                    <button class="explore-btn"><a href="malik-deenar.html" class="link">Explore</a></button>
+                </div>
+            </div>
+
+            <!-- Destination Card 3 -->
+            <div class="destination-card" style="background-image: url('images/Ranipuram.jpg');">
+                <div class="overlay">
+                    <h3>Ranipuram Hills</h3>
+                    <p>Ranipuram</p>
+                    <button class="explore-btn"><a href="ranipuram.html" class="link">Explore</a></button>
+                </div>
+            </div>
+
+            <!-- Destination Card 4 -->
+            <div class="destination-card" style="background-image: url('images/parappa-wildlife.jpg');">
+                <div class="overlay">
+                    <h3>Wildlife Sanctuary</h3>
+                    <p>Parappa</p>
+                    <button class="explore-btn"><a href="parappa.html" class="link">Explore</a></button>
+                </div>
+            </div>
+
+            <!-- Destination Card 5 -->
+            <div class="destination-card" style="background-image: url('images/Kavvayi-Backwaters-Payyanur-.png');">
+                <div class="overlay">
+                    <h3>Kavvayi Backwaters</h3>
+                    <p>Valiyaparamba</p>
+                    <button class="explore-btn"><a href="kavvayi.html" class="link">Explore</a></button>
+                </div>
+            </div>
+
+            <!-- Destination Card 6 -->
+            <div class="destination-card" style="background-image: url('images/kappil.jpg');">
+                <div class="overlay">
+                    <h3>Kappil Beach</h3>
+                    <p>Kappil</p>
+                    <button class="explore-btn"><a href="kappil.html" class="link">Explore</a></button>
+                </div>
+            </div>
+    </div>
+  </section>
+
+
+  <!--Testimonial Section-->
+  <section class="testimonials" id="learn">
+    <div class="container">
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <p class="section-description">Real experiences from people who traveled to halal-friendly destinations.</p>
+
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="quote">"I had an unforgettable experience in Bekal. The halal-friendly services were excellent, and the culture was beautiful!"</p>
+                    <div class="user-info">
+                        <img src="images/John Doe.jpg" alt="User 1" class="user-avatar">
+                        <div class="user-details">
+                            <h4>John Doe</h4>
+                            <p>Traveler from USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="quote">"Visiting Malik Deenar Mosque was a life-changing experience. Everything was perfectly organized for halal travelers."</p>
+                    <div class="user-info">
+                        <img src="images/Aish khan.jpg" alt="User 2" class="user-avatar">
+                        <div class="user-details">
+                            <h4>Aisha Khan</h4>
+                            <p>Traveler from UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="quote">"Ranipuram offers amazing halal-friendly experiences. The city is full of attractions, and I felt safe and comfortable everywhere."</p>
+                    <div class="user-info">
+                        <img src="images/ahmed ali.jpeg" alt="User 3" class="user-avatar">
+                        <div class="user-details">
+                            <h4>Ahmed Ali</h4>
+                            <p>Traveler from Saudi Arabia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!--Resource Section-->
+  <section class="resource-highlights">
+    <div class="container">
+        <h2 class="section-title">Unlock the Best Travel Resources</h2>
+        <p class="section-description">Your journey to halal travel begins here. Discover our premium resources designed for a seamless experience.</p>
+
+        <div class="resource-grid">
+            <!-- Resource 1 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="resource-title">Halal Travel Guides</h3>
+                <p class="resource-description">Explore our extensive travel guides for halal-friendly destinations across the globe.</p>
+                <a href="guide.html" class="learn-more-btn">Explore</a>
+            </div>
+
+            <!-- Resource 2 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="resource-title">Halal Restaurants</h3>
+                <p class="resource-description">Find the best halal restaurants wherever you are with our curated list of eateries.</p>
+                <a href="restaurant.html" class="learn-more-btn">Explore</a>
+            </div>
+
+            <!-- Resource 3 -->
+            <div class="resource-card">
+              <div class="resource-icon">
+                <i class="fas fa-mosque"></i>
+              </div>
+              <h3 class="resource-title">Prayer Timetables</h3>
+              <p class="resource-description">Stay on track with accurate prayer times and nearby mosques for a peaceful journey.</p>
+              <a href="prayer.html" class="learn-more-btn">Explore</a>
+            </div>
+
+            <!-- Resource 4 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3 class="resource-title">Islamic Travel Tips</h3>
+                <p class="resource-description">Get insider tips and tricks to make your travels smoother and more enjoyable.</p>
+                <a href="tip.html" class="learn-more-btn">Explore</a>
+            </div>
+
+            <!-- Resource 5 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="resource-title">Event Listings</h3>
+                <p class="resource-description">Stay up-to-date with the latest halal-friendly events happening around the world.</p>
+                <a href="event.html" class="learn-more-btn">Explore</a>
+            </div>
+
+            <!-- Resource 6 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="resource-title">Travel Assistance</h3>
+                <p class="resource-description">Get 24/7 travel assistance for all your needs while you're on the go.</p>
+                <a href="assistance.html" class="learn-more-btn">Explore</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!--Subscription Section-->
+  <section class="subscription">
+    <div class="subscription-content">
+        <h2>Join Our Community</h2>
+        <p>Stay updated with the latest news, offers, and halal-friendly travel tips. Subscribe to our newsletter now!</p>
+        <form action="#" method="POST">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </div>
+  </section>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h3>Halal Trip</h3>
+            <p>Your trusted companion for halal-friendly travel. Explore the world with ease and confidence.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="images/fb-logo.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/x-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/instagram-logo.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="masjid.html">Masjid Finder</a></li>
+                <li><a href="restaurant.html">Halal Restaurants</a></li>
+                <li><a href="adhkars.html">Adhkar & Reminders</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-section footer-resources">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Travel Tips</a></li>
+                <li><a href="#">Community Blog</a></li>
+                <li><a href="#">Halal Certification Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Halal Trip. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Get the button
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Show the button when scrolling down 200px from the top
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.classList.add("show");
+        } else {
+            backToTopButton.classList.remove("show");
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"  // Smooth scroll
+        });
+    });
+  </script>
+</body>
+</html>
